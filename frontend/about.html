@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ArdhiYetu - About</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      padding-top: 100px; /* To ensure content isn't hidden behind the fixed navbar */
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Fixed Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #f2f2f2;">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">ArdhiYetu</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="testimonials.html">Testimonials</a></li>
+          <li class="nav-item"><a class="nav-link" href="faqs.html">FAQs</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item">
+            <a class="nav-link btn btn-primary text-dark fw-bold px-3" href="login.html">Login</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+
+  <!-- Hero Section (Same as Home) -->
+  <section class="hero d-flex align-items-center justify-content-center text-center text-white" 
+      style="height: 90vh; position: relative; background: url('images/Untitled design (1).png') no-repeat center center / cover;">
+    <div class="overlay" 
+         style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.3);">
+    </div>
+    <div style="position: relative; z-index: 2;">
+      <h2 class="display-4 fw-bold">About ArdhiYetu</h2>
+      <p class="lead">Your trusted digital land management system, transforming the way land records are managed.</p>
+    </div>
+  </section>
+
+  <!-- About Section Content -->
+  <section id="about" class="container-fluid text-center py-5" style="background: url('images/about-bg.jpg') center/cover no-repeat;">
+    <div class="container">
+      <h2 class="fw-bold text-dark">About ArdhiYetu</h2>
+      <p class="lead text-dark">
+        ArdhiYetu is a revolutionary digital land management system designed to bring transparency, security, and efficiency to land registration, verification, and geospatial mapping.
+      </p>
+
+      <div class="row mt-4">
+        <div class="col-md-4">
+          <h4 class="text-dark">📜 Secure Land Registration</h4>
+          <p class="text-dark">Digitally register and store land records securely with an easy-to-use platform.</p>
+        </div>
+        <div class="col-md-4">
+          <h4 class="text-dark">🛡️ Ownership Verification</h4>
+          <p class="text-dark">Ensure fraud-free land transactions with instant verification powered by a centralized database.</p>
+        </div>
+        <div class="col-md-4">
+          <h4 class="text-dark">🗺️ Advanced Mapping</h4>
+          <p class="text-dark">Visualize and manage land ownership using interactive GIS-based mapping technology.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3">
+    <p>&copy; 2025 ArdhiYetu. All Rights Reserved.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

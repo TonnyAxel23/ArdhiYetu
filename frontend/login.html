@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - ArdhiYetu</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .container {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            border-radius: 8px;
+            background: white;
+            box-shadow: 0px 0px 80px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h2 {
+           color: black;
+        }
+
+        .error-message {
+            color: red;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .forgot-password {
+            display: block;
+            margin: 10px 0;
+            font-size: 14px;
+        }
+
+        /* Input Field Styling */
+        .input-container {
+            position: relative;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        .input-container input {
+            width: 100%;
+            padding: 10px;
+            padding-right: 40px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        .toggle-password {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            font-size: 18px;
+            color: #555;
+        }
+
+        /* Role Selection Dropdown */
+        .role-container {
+            margin-top: 10px;
+            text-align: left;
+        }
+
+        .role-container select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background: white;
+        }
+
+        /* Register Link Styling */
+        .register-link {
+            margin-top: 15px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <h1>ArdhiYetu</h1>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="register.html">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="container">
+        <h2>Login</h2>
+
+        <!-- Error Message Display -->
+        <?php if (isset($_GET['error'])): ?>
+        <p class="error-message">
+            <?= htmlspecialchars($_GET['error']); ?>
+        </p>
+        <?php endif; ?>
+
+        <form action="../backend/login.php" method="POST">
+            <div class="input-container">
+                <input type="email" name="email" placeholder="Email" required>
+            </div>
+
+            <div class="input-container">
+                <input type="password" id="login-password" name="password" placeholder="Password" required>
+                <span class="toggle-password" onclick="togglePassword('login-password')">👁️</span>
+            </div>
+
+            <!-- Role Selection (Optional for Clarity) 
+            <div class="role-container">
+                <label for="role"><strong>Login As:</strong></label>
+                <select id="role" name="role" required>
+                    <option value="user">User</option>
+                    <option value="surveyor">Surveyor</option>
+                    <option value="admin">Admin</option>
+                </select>
+            </div>
+        -->
+
+            <!-- Forgot Password Link -->
+            <a href="forgot_password.html" class="forgot-password">Forgot Password?</a>
+
+            <button type="submit">Login</button>
+        </form>
+        
+        <!-- New Register Link for users who don't have an account -->
+        <div class="register-link">
+            <p>Don't have an account? <a href="register.html">Register here</a></p>
+        </div>
+    </section>
+
+    <script>
+        function togglePassword(fieldId) {
+            let field = document.getElementById(fieldId);
+            field.type = field.type === "password" ? "text" : "password";
+        }
+    </script>
+</body>
+</html>
